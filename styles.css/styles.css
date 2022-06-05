@@ -156,12 +156,16 @@ color: var(--button-hover-color);
     display: flex;
     background-color: var(--block-one-bkc);
     justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
+
 }
 .container .hero {
-    padding: 0;
+    display: inline-block;
+    box-sizing:border-box;
     margin: 0;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
 }
 
 .title-one {
@@ -173,7 +177,6 @@ color: var(--button-hover-color);
     text-transform: uppercase;
     color: var(--main-back-color);
     margin-bottom: 30px;
-    margin-top: 200px;
     
 }
 .buttonlogo {
@@ -191,7 +194,6 @@ color: var(--button-hover-color);
     height: 50px;
     border-radius: 4px;
     padding: 10px;
-    margin-bottom: 200px;
 }
 
 .buttonlogo:hover,
@@ -257,12 +259,15 @@ color: var(--button-hover-color);
     margin-bottom: 50px;
 }
 .pictures {
-    display: inline-flex;
+    margin: 0;
 }
-.boxes:not(:last-child) {
-    margin-right: 30px;
+.pictures-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: calc((100%-30px)/3);
+    margin: 0;
 }
-
 
 /* Наша команда  */
 
