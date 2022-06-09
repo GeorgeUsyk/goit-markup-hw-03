@@ -214,13 +214,14 @@ color: var(--button-hover-color);
 .block-two {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: calc((100% - 90px)/4);
+    
 }
 .block-two-item {
     display: block;
     flex-wrap: wrap;
-    padding: 0;
-    gap: 30px;
     flex-basis: calc((100% - 90px)/4);
 }
 
@@ -245,7 +246,7 @@ color: var(--button-hover-color);
 .text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.71;
     color: var(--main-text-color);
     margin: 0;
 }
@@ -260,14 +261,13 @@ color: var(--button-hover-color);
 }
 .pictures-list {
     display: flex;
-    justify-content: space-between;
-
-}
-.boxes {
-    display: flex;
     flex-wrap: wrap;
     gap: 30px;
     flex-basis: calc((100% - 60px)/3);
+}
+.boxes {
+    display: flex;
+
 }
 .image {
     box-sizing: auto;
