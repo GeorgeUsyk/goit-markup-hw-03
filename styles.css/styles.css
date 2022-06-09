@@ -56,6 +56,7 @@ font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--title-text-color);
+border-bottom: 1px solid #ECECEC;
 }
 
 .header-container {
@@ -95,6 +96,8 @@ color: var(--title-text-color);
     letter-spacing: 0.02em;
     color: var(--title-text-color);
     text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .navlist {
     display: flex;
@@ -110,8 +113,6 @@ color: var(--title-text-color);
 .list-navi {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 .contactslist {
     display: flex;
@@ -184,6 +185,7 @@ color: var(--button-hover-color);
     display: block;
     border-radius: 4px;
     padding: 10px 32px;
+    border: 0;
 }
 
 .buttonlogo:hover,
@@ -191,8 +193,17 @@ color: var(--button-hover-color);
     background: var(--button-hover-background);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.title-two-hidden {
-    display: hidden;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* -- БЛОК С ТЕКСТОМ --*/
@@ -202,27 +213,23 @@ color: var(--button-hover-color);
 }
 .block-two {
     display: flex;
-    margin: 0 auto;
     align-items: center;
-}
-.block-two > title-two {
-    display: hidden;
+    justify-content: space-around;
 }
 .block-two-item {
-    width: 270px;
-    height: 101px;
+    display: block;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 30px;
+    flex-basis: calc((100% - 90px)/4);
 }
-.block-two-item:not(:last-child) {
-    margin-right: 30px;
-}
+
 .title-two {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
-    width: 376px;
-    height: 42px;
     margin: 0 auto;
     display: block;
     margin-bottom: 50px;
@@ -243,18 +250,27 @@ color: var(--button-hover-color);
     margin: 0;
 }
 /* Блок Чем мы занимаемся+Картинки-  */
+
 .section-we-do {
-    padding-top: 0;
+    background-color: #F5F4FA;
+    
 }
 .pictures {
-    margin: 0;
+    margin: 0 auto;
 }
 .pictures-list {
     display: flex;
+    justify-content: space-between;
+
+}
+.boxes {
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100%-30px)/3);
-    margin: 0;
+    flex-basis: calc((100% - 60px)/3);
+}
+.image {
+    box-sizing: auto;
 }
 
 /* Наша команда  */
@@ -266,10 +282,11 @@ color: var(--button-hover-color);
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100-30px)/4);
+    justify-content: space-between;
 }
 .employers {
-    box-sizing: content-box;
+    gap: calc((100% - 90px)/4);
+    box-sizing: border-box;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -281,10 +298,6 @@ color: var(--button-hover-color);
     padding-bottom: 30px;
     padding-top: 30px;
 }
-/*.teammember-photo {
-    margin-bottom: 30px;
-}*/
-
 .team-member {
     font-weight: 500;
     font-size: 16px;
@@ -302,7 +315,10 @@ color: var(--button-hover-color);
 
 /* ПОДВАЛ  */
 .footer {
-    background-color: #2F303A;;
+    background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
 }
 .footerlogo {
     display: inline-block;
@@ -364,9 +380,7 @@ color: var(--button-hover-color);
 .buttonslist {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    flex-basis: calc((100%-8px)/5);
-}
+    gap: 8px;}
 
 .button {
     font-family: 'Roboto';
@@ -398,7 +412,7 @@ color: var(--button-hover-color);
     display: block;
 }
 .project-data {
-    padding: 24px 20px;
+    padding: 20px 24px;
     border-bottom: 1px Solid #EEEEEE;
     border-left: 1px Solid #EEEEEE;
     border-right: 1px Solid #EEEEEE;
@@ -414,10 +428,13 @@ color: var(--button-hover-color);
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100%-30px)/3);
+    
 
 }
 .portfolio-item {
     border-bottom: 1px solid #EEEEEE;
+    flex-basis: calc((100% - 60px)/3);
+    border: 0;
+
 }
 
